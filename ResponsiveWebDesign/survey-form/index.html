@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Survey Form</title>
+    <meta charset='UTF-8'>
+    <link rel='stylesheet' href='styles.css'>
+  </head>
+  <body>
+    <h1 id='title'>Survey Form</h1>
+    <p id='description'>This is a form for the project on FreeCodeCamp, enjoy it!</p>
+    <form id='survey-form' method="post" action='https://register-demo.freecodecamp.org'>
+      <fieldset>
+        <label id='name-label' for='name'>Name<input id='name' type='text' placeholder='Enter your name' required ></label>
+        <label id='email-label' for='email'>Email<input id='email' type='email' required placeholder='Enter your email'></label>
+        <label id='number-label' for='number'>Number<input id='number' type='number' placeholder='19' pattern="[0-9]{1,8}" min='1' max='9999'></label>
+      </fieldset>
+      <fieldset>
+        <label for='dropdown'>Select the best for you</label>
+        <select id='dropdown'>
+          <option value=''>select one</option>
+          <option value='1'>Pizza</option>
+          <option value='2'>Hamburger</option>
+          <option value='3'>Sushi</option>
+        </select>
+      </fieldset>
+      <fieldset>
+        <legend>Choose (can multiple)</legend>
+        <label for='orange-juice'><input id='orange-juice' type='radio' value='orange-juice' name='drink' class='inline'>Orange Juice</label>
+        <label for='cola'><input id='cola' type='radio' value='cola' name='drink' class='inline'>Cola</label>
+        <label for='water'><input id='water' type='radio' value='water' name='drink' class='inline'>Water</label>
+      </fieldset>
+      <fieldset>
+        <legend>Choose (can multiple again)</legend>
+        <label class='checkb' for='eat'><input type='checkbox' id='eat' value='eat' class='inline'>I eat a lot</label>
+        <label class='checkb' for='drink'><input type='checkbox' value='drink' id='drink' class='inline'>I drink a lot</label>
+        <label class='checkb' for='sleep'> <input type='checkbox' value='sleep' id='sleep' class='inline'>I sleep a lot</label>
+      </fieldset>  
+      <label for='comments'>Additional comments:<textarea name='comments' rows='3' cols='30' id='comments'></textarea></label>
+      <input id='submit' type='submit' value="Submit">
+    </form>
+  </body>
+</html>
